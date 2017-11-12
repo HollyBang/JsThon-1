@@ -1,0 +1,27 @@
+{
+  "name": "jsthon",
+  "version": "1.0.0",
+  "description": "Telegram bot to filter spam",
+  "main": "src/server.js",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "node-telegram-bot-api": "^0.29.0",
+    "standard": "^10.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2"
+  },
+  "scripts": {
+    "test": "standard && node my-tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gus3inov/JsThon-1.git"
+  },
+  "author": "pro.js.noobs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gus3inov/JsThon-1/issues"
+  },
+  "homepage": "https://github.com/gus3inov/JsThon-1#readme"
+}
