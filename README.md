@@ -10,9 +10,10 @@
 
 Основной стек технологий:
 
-* [Node](https://nodejs.org/en/) - Node v7.9.0
-* [node-telegram-bot-api](https://github.com/yagop/node-telegram-bot-api) - node-telegram-bot-api
-* [bluebird](http://bluebirdjs.com/docs/getting-started.html) - Для работы с промисами
+* [Node](https://nodejs.org/en/) - Node v8.9.1
+* [telegraf.js](https://github.com/telegraf/telegraf) - API для создания бота
+
+#### Документация по [telegraf.js](https://github.com/telegraf/telegraf)
 
 ### Установка
 
