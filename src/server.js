@@ -3,7 +3,7 @@ const { reply } = Telegraf
 
 
 //spam store
-var spamModule = (function(){
+let spamModule = (function(){
   let spamStore = [];
   return {
       getSpamStore: function(){
