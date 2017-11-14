@@ -23,15 +23,17 @@ bot.start((ctx) => {
 bot.command('help', (ctx) => ctx.reply('Try send a sticker!'))
 //get all spam in store
 bot.command('getspam', (ctx) => { 
-   let allSpam = spamModule.getSpamStore().join(', ')
- return ctx.reply(`Список слов в спаме: ${allSpam}`)
+   let allSpam = spamModule.getSpamStore().join('; ')
+ return ctx.reply(`Список спама:  ${allSpam}`)
 })
-//add spam word
-bot.hears(/(\/spam|\/спам) [a-zа-яё]+/i, (ctx) => {
+//add spam 
+//(\/spam|\/спам) (.*?)+ one paragraph
+//(\/spam|\/спам) [a-zа-яё]+ one word
+bot.hears(/(\/spam|\/спам) (.*?)+/i, (ctx) => {
   let receivedMessage = ctx.message.text;
-  let spamWord = receivedMessage.split(' ')[1];
-  spamModule.pushSpamWord(spamWord);
-  return ctx.reply(`Добавил в спам ${spamWord}`)
+  let spam = receivedMessage.split(' ').slice(1).join(' ');
+  spamModule.pushSpamWord(spam);
+  return ctx.reply(`Добавил в спам ${spam}`)
 })
 bot.hears('hi', (ctx) => ctx.reply('Hey there!'))
 bot.hears(/buy/i, (ctx) => ctx.reply('Buy-buy!'))
