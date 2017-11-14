@@ -27,10 +27,10 @@ bot.command('getspam', (ctx) => {
  return ctx.reply(`Список слов в спаме: ${allSpam}`)
 })
 //add spam word
-bot.hears(/(\/spam) \w+/, (ctx) => {
+bot.hears(/(\/spam|\/спам) [a-zа-яё]+/i, (ctx) => {
   let receivedMessage = ctx.message.text;
   let spamWord = receivedMessage.split(' ')[1];
-  spamModule.pushSpamWord(arrMes);
+  spamModule.pushSpamWord(spamWord);
   return ctx.reply(`Добавил в спам ${spamWord}`)
 })
 bot.hears('hi', (ctx) => ctx.reply('Hey there!'))
